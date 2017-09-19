@@ -1,11 +1,3 @@
-/*
-* Nötli
-*
-* Tobias Fatzer, Laurent Mouchart, Jonas Gredig, Benjamin Raison, Andrin Kappeler
-* Version 1
-*
-* */
-
 package ch.notli.notli;
 
 import android.os.Bundle;
