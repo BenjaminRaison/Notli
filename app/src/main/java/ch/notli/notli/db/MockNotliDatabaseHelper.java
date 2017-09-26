@@ -1,5 +1,7 @@
 package ch.notli.notli.db;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ch.notli.notli.db.model.Grade;
@@ -8,54 +10,70 @@ import ch.notli.notli.db.model.Subject;
 
 public class MockNotliDatabaseHelper implements INotliDatabase {
 
-
     @Override
     public void addGrade(Grade grade) {
-
     }
 
     @Override
     public void addSubject(Subject subject) {
-
     }
 
     @Override
     public void addSemester(Semester semester) {
-
     }
 
     @Override
     public List<Grade> getGrades(Semester semester) {
-        return null;
+        List<Grade> list = new ArrayList<>();
+        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 2", 1, 5, getSubjects().get(1), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 3", 1, 4, getSubjects().get(5), getSemesters().get(1)));
+        return list;
     }
 
     @Override
     public List<Grade> getGrades(Subject subject) {
-        return null;
+        List<Grade> list = new ArrayList<>();
+        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 4", 1, 5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 5", 1, 4, getSubjects().get(0), getSemesters().get(1)));
+        return list;
     }
 
     @Override
     public List<Grade> getGrades(Semester semester, Subject subject) {
-        return null;
+        List<Grade> list = new ArrayList<>();
+        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 2", 1, 5, getSubjects().get(1), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 3", 1, 4, getSubjects().get(5), getSemesters().get(1)));
+        return list;
     }
 
     @Override
     public List<Subject> getSubjects() {
-        return null;
+        List<Subject> list = new ArrayList<>();
+        list.add(new Subject(1, "Deutsch", true));
+        list.add(new Subject(2, "Französisch", true));
+        list.add(new Subject(3, "Englisch", true));
+        list.add(new Subject(4, "Mathematik", true));
+        list.add(new Subject(5, "Technik & Umwelt", true));
+        return list;
     }
 
     @Override
     public List<Subject> getSubjects(Semester semester) {
-        return null;
+        return getSubjects();
     }
 
     @Override
     public List<Semester> getSemesters() {
-        return null;
+        List<Semester> list = new ArrayList<>();
+        list.add(new Semester(1, "Semester 1", new Date(1452211200L), new Date(1464825600L), getSubjects()));
+        return list;
     }
 
     @Override
     public Semester getCurrentSemester() {
-        return null;
+        return getSemesters().get(0);
     }
 }
