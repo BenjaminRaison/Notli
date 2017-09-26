@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Notli</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="actionSettings">Einstellungen</string>
