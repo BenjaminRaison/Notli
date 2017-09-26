@@ -48,6 +48,36 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
     }
 
     @Override
+    public void updateGrade(Grade grade) {
+
+    }
+
+    @Override
+    public void updateSubject(Subject subject) {
+
+    }
+
+    @Override
+    public void updateSemester(Semester semester) {
+
+    }
+
+    @Override
+    public void deleteGrade(Grade grade) {
+
+    }
+
+    @Override
+    public void deleteSubject(Subject subject) {
+
+    }
+
+    @Override
+    public void deleteSemester(Semester semester) {
+
+    }
+
+    @Override
     public List<Grade> getGrades(Semester semester) {
         return null;
     }
@@ -79,6 +109,21 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
 
     @Override
     public Semester getCurrentSemester() {
+        return null;
+    }
+
+    @Override
+    public Semester getSemester(int id) {
+        return null;
+    }
+
+    @Override
+    public Grade getGrade(int id) {
+        return null;
+    }
+
+    @Override
+    public Subject getSubject(int id) {
         return null;
     }
 }

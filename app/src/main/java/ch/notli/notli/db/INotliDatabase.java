@@ -15,6 +15,18 @@ public interface INotliDatabase {
 
     void addSemester(Semester semester);
 
+    void updateGrade(Grade grade);
+
+    void updateSubject(Subject subject);
+
+    void updateSemester(Semester semester);
+
+    void deleteGrade(Grade grade);
+
+    void deleteSubject(Subject subject);
+
+    void deleteSemester(Semester semester);
+
     List<Grade> getGrades(Semester semester);
 
     List<Grade> getGrades(Subject subject);
@@ -28,5 +40,11 @@ public interface INotliDatabase {
     List<Semester> getSemesters();
 
     Semester getCurrentSemester();
+
+    Semester getSemester(int id);
+
+    Grade getGrade(int id);
+
+    Subject getSubject(int id);
 
 }

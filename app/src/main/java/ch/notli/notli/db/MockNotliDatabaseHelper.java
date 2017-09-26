@@ -23,6 +23,36 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     }
 
     @Override
+    public void updateGrade(Grade grade) {
+
+    }
+
+    @Override
+    public void updateSubject(Subject subject) {
+
+    }
+
+    @Override
+    public void updateSemester(Semester semester) {
+
+    }
+
+    @Override
+    public void deleteGrade(Grade grade) {
+
+    }
+
+    @Override
+    public void deleteSubject(Subject subject) {
+
+    }
+
+    @Override
+    public void deleteSemester(Semester semester) {
+
+    }
+
+    @Override
     public List<Grade> getGrades(Semester semester) {
         List<Grade> list = new ArrayList<>();
         list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
@@ -75,5 +105,20 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     @Override
     public Semester getCurrentSemester() {
         return getSemesters().get(0);
+    }
+
+    @Override
+    public Semester getSemester(int id) {
+        return null;
+    }
+
+    @Override
+    public Grade getGrade(int id) {
+        return null;
+    }
+
+    @Override
+    public Subject getSubject(int id) {
+        return null;
     }
 }
