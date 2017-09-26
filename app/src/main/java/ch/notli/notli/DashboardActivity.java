@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.mikephil.charting.charts.BarChart;
+
 public class DashboardActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,9 @@ public class DashboardActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_dashboard, menu);
         return true;
+
+
+
     }
 
     @Override
