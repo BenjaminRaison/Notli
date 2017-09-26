@@ -8,6 +8,10 @@ import ch.notli.notli.db.model.Grade;
 import ch.notli.notli.db.model.Semester;
 import ch.notli.notli.db.model.Subject;
 
+/**
+ * HOW TO USE: INotliDatabase db = new MockNotliDatabaseHelper();
+ * Data my be inconsistent
+ */
 public class MockNotliDatabaseHelper implements INotliDatabase {
 
     @Override
@@ -109,16 +113,16 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
 
     @Override
     public Semester getSemester(int id) {
-        return null;
+        return getSemesters().get(0);
     }
 
     @Override
     public Grade getGrade(int id) {
-        return null;
+        return getGrades(getSemesters().get(0)).get(0);
     }
 
     @Override
     public Subject getSubject(int id) {
-        return null;
+        return getSubjects().get(0);
     }
 }
