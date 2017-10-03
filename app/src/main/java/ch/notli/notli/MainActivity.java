@@ -153,8 +153,6 @@ public class MainActivity extends AppCompatActivity {
                     return "SECTION 1";
                 case 1:
                     return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
             }
             return null;
         }
