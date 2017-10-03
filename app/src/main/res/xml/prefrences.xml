@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- opens a subscreen of settings -->
+    <PreferenceScreen
+        android:key="theme"
+        android:persistent="false"
+        android:title="Theme">
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key=""
+        android:persistent="false"
+        android:title="About">
+        <PreferenceScreen
+        android:persistent="false"
+        android:title="TESTABOUT"></PreferenceScreen>
+        <PreferenceScreen
+        android:persistent="false"
+        android:title="TESTCONTAINER"></PreferenceScreen>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key=""
+        android:persistent="false"
+        android:title="Lizensen">
+        <PreferenceScreen
+            android:persistent="false"
+            android:title="Lizens 1"></PreferenceScreen>
+        <PreferenceScreen
+            android:persistent="false"
+            android:title="Lizens 2"></PreferenceScreen>
+        <PreferenceScreen
+            android:persistent="false"
+            android:title="Lizens 3"></PreferenceScreen>
+    </PreferenceScreen>
+</PreferenceScreen>
