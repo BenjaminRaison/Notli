@@ -1,4 +1,4 @@
-package ch.notli.notli;
+package ch.notli.notli.Activitys;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;

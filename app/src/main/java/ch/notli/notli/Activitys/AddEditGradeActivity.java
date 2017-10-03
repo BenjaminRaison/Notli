@@ -1,17 +1,11 @@
-package ch.notli.notli;
+package ch.notli.notli.Activitys;
 
-import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.DatePicker;
-import android.widget.Toast;
 
-import java.util.Calendar;
-import java.util.Date;
+import ch.notli.notli.R;
 
 public class AddEditGradeActivity extends AppCompatActivity{
 

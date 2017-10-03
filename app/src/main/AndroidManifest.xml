@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activitys.SplashActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,9 +28,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddEditGradeActivity"
-            android:label="@string/title_activity_addGrade"
-            />
+            android:name=".Activitys.AddEditGradeActivity"
+            android:label="@string/title_activity_addGrade" />
 
     </application>
 </manifest>
