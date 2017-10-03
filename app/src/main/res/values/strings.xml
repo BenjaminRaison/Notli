@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Notli</string>
     <string name="title_activity_dashboard">Dashboard</string>
-    <string name="title_activity_main">MainActivity</string>
     <string name="actionSettings">Einstellungen</string>
     <string name="actionAddSubject">Fach hinzufügen</string>
     <string name="actionAddSemester">Semester hinzufügen</string>
