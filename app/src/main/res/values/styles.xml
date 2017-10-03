@@ -11,6 +11,15 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/colorBackgroundDark</item>
+        <item name="android:colorForeground">@color/colorForegroundDark</item>
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
+        <item name="android:textColorPrimary">@color/colorForegroundDark</item>
+        <item name="android:colorButtonNormal">@color/colorFocusDark</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
