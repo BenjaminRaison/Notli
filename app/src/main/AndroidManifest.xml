@@ -13,7 +13,8 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditGradeActivity"></activity>
+        <activity android:name=".AddGradeActivity"
+            android:label="@string/title_activity_addGrade"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
-
 </manifest>
