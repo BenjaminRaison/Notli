@@ -10,7 +10,8 @@
 
     <!--AddGrade-->
     <string name="title_activity_addGrade">Add Grade</string>
-    <string name="text_activity_addGrade_thema">Thema</string>
-    <string name="date_activity_addGrade_date">Date</string>
-    <string name="button_activity_addGrade_save">Save</string>
+    <string name="text_activity_addEditGrade_thema">Thema</string>
+    <string name="text_activity_addGrade_date">Date</string>
+    <string name="button_activity_addEditGrade_save">Save</string>
+    <string name="button_activity_addEditGrade_delete">Delete</string>
 </resources>
