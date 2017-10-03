@@ -53,5 +53,18 @@
 
     <!-- Example settings for Notifications -->
 
-    <string name="title_activity_settings_fragment">SettingsFragment</string>
+    <string name="title_activity_settings_fragment">Einstellungen</string>
+    <string name="string_settingsactivity_licenses">Lizenzen</string>
+    <string name="string_settingsactivity_about">Über uns</string>
+    <string name="string_settingsactivity_themes">Theme</string>
+
+    <string-array name="strings_settingsactivity_themes">
+        <item>Hell</item>
+        <item>Dunkel</item>
+    </string-array>
+
+    <string-array name="values_settingsactivity_themes">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
 </resources>

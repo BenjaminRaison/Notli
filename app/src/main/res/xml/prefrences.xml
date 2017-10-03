@@ -1,33 +1,36 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- opens a subscreen of settings -->
-    <PreferenceScreen
+    <ListPreference
         android:key="theme"
         android:persistent="false"
-        android:title="Theme">
+        android:title="@string/string_settingsactivity_themes"
+        android:entries="@array/strings_settingsactivity_themes"
+        android:entryValues="@array/values_settingsactivity_themes">
+
+    </ListPreference>
+    <PreferenceScreen
+        android:key=""
+        android:persistent="false"
+        android:title="@string/string_settingsactivity_about">
+        <PreferenceScreen
+            android:persistent="false"
+            android:title="TESTABOUT" />
+        <PreferenceScreen
+            android:persistent="false"
+            android:title="TESTCONTAINER" />
     </PreferenceScreen>
     <PreferenceScreen
         android:key=""
         android:persistent="false"
-        android:title="About">
-        <PreferenceScreen
-        android:persistent="false"
-        android:title="TESTABOUT"></PreferenceScreen>
-        <PreferenceScreen
-        android:persistent="false"
-        android:title="TESTCONTAINER"></PreferenceScreen>
-    </PreferenceScreen>
-    <PreferenceScreen
-        android:key=""
-        android:persistent="false"
-        android:title="Lizensen">
+        android:title="@string/string_settingsactivity_licenses">
         <PreferenceScreen
             android:persistent="false"
-            android:title="Lizens 1"></PreferenceScreen>
+            android:title="Lizenz 1" />
         <PreferenceScreen
             android:persistent="false"
-            android:title="Lizens 2"></PreferenceScreen>
+            android:title="Lizenz 2" />
         <PreferenceScreen
             android:persistent="false"
-            android:title="Lizens 3"></PreferenceScreen>
+            android:title="Lizenz 3" />
     </PreferenceScreen>
 </PreferenceScreen>
