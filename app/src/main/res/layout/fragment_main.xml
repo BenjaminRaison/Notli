@@ -8,4 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ch.notli.notli.MainActivity$PlaceholderFragment">
 
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.github.mikephil.charting.charts.BarChart>
+
 </RelativeLayout>
