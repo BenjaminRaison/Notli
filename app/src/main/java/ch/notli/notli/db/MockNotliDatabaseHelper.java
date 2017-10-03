@@ -15,6 +15,11 @@ import ch.notli.notli.db.model.Subject;
 public class MockNotliDatabaseHelper implements INotliDatabase {
 
     @Override
+    public void closeDatabase() {
+
+    }
+
+    @Override
     public void addGrade(Grade grade) {
     }
 

@@ -1,5 +1,6 @@
 package ch.notli.notli.db;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -47,6 +48,11 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
     }
 
     @Override
+    public void closeDatabase() {
+        getWritableDatabase().close();
+    }
+
+    @Override
     public void onOpen(SQLiteDatabase db) {
         super.onOpen(db);
         if (!db.isReadOnly()) {
@@ -73,12 +79,23 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
 
     @Override
     public void addSubject(Subject subject) {
-
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("id", subject.getId());
+        values.put("name", subject.getName());
+        values.put("counts", subject.isCountTowardsAverage());
+        db.insert("subject", null, values);
     }
 
     @Override
     public void addSemester(Semester semester) {
-
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("id", semester.getId());
+        values.put("name", semester.getName());
+        //values.put("startDate", semester.getStart());
+        //values.put("endDate", semester.getEnd())
+        db.insert("semester", null, values);
     }
 
     @Override
@@ -170,4 +187,6 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
     public Subject getSubject(int id) {
         return null;
     }
+
+
 }

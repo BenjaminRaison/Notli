@@ -9,6 +9,11 @@ import ch.notli.notli.db.model.Subject;
 
 public interface INotliDatabase {
 
+    /**
+     * Closes the database. Call this is onDestroy, or after you stop using the database
+     */
+    void closeDatabase();
+
     void addGrade(Grade grade);
 
     void addSubject(Subject subject);
