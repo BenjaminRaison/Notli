@@ -30,7 +30,7 @@
         <activity
             android:name=".AddEditGradeActivity"
             android:label="@string/title_activity_addGrade"
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
 
     </application>
 </manifest>
