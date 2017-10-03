@@ -1,21 +1,45 @@
 package ch.notli.notli.db.model;
 
+import java.util.Date;
+
 public class Grade {
 
     private int id;
     private String name;
+    private Date date;
     private double weight;
     private double grade;
     private Subject subject;
     private Semester semester;
 
-    public Grade(int id, String name, double weight, double grade, Subject subject, Semester semester) {
-        this.id = id;
+    public Grade(String name, Date date, double weight, double grade, Subject subject,
+                 Semester semester) {
         this.name = name;
+        this.date = date;
         this.weight = weight;
         this.grade = grade;
         this.subject = subject;
         this.semester = semester;
+    }
+
+    public Grade(int id, String name, Date date, double weight, double grade, Subject subject,
+                 Semester semester) {
+
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.weight = weight;
+        this.grade = grade;
+        this.subject = subject;
+        this.semester = semester;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public int getId() {

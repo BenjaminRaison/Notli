@@ -52,4 +52,11 @@ public interface INotliDatabase {
 
     Subject getSubject(int id);
 
+    double getAverage(Semester semester);
+
+    double getAverage(Semester semester, Subject subject);
+
+    double getAverage(Subject subject);
+
+
 }

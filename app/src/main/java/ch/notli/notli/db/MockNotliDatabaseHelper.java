@@ -13,6 +13,7 @@ import ch.notli.notli.db.model.Subject;
  * Data my be inconsistent
  */
 public class MockNotliDatabaseHelper implements INotliDatabase {
+    private static Date date = new Date(1507033672);
 
     @Override
     public void closeDatabase() {
@@ -64,27 +65,27 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     @Override
     public List<Grade> getGrades(Semester semester) {
         List<Grade> list = new ArrayList<>();
-        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 2", 1, 5, getSubjects().get(1), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 3", 1, 4, getSubjects().get(5), getSemesters().get(1)));
+        list.add(new Grade(1, "Test 1", date, 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 2", date, 1, 5, getSubjects().get(1), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 3", date, 1, 4, getSubjects().get(5), getSemesters().get(1)));
         return list;
     }
 
     @Override
     public List<Grade> getGrades(Subject subject) {
         List<Grade> list = new ArrayList<>();
-        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 4", 1, 5, getSubjects().get(0), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 5", 1, 4, getSubjects().get(0), getSemesters().get(1)));
+        list.add(new Grade(1, "Test 1", date, 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 4", date, 1, 5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 5", date, 1, 4, getSubjects().get(0), getSemesters().get(1)));
         return list;
     }
 
     @Override
     public List<Grade> getGrades(Semester semester, Subject subject) {
         List<Grade> list = new ArrayList<>();
-        list.add(new Grade(1, "Test 1", 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 2", 1, 5, getSubjects().get(1), getSemesters().get(0)));
-        list.add(new Grade(1, "Test 3", 1, 4, getSubjects().get(5), getSemesters().get(1)));
+        list.add(new Grade(1, "Test 1", date, 1, 4.5, getSubjects().get(0), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 2", date, 1, 5, getSubjects().get(1), getSemesters().get(0)));
+        list.add(new Grade(1, "Test 3", date, 1, 4, getSubjects().get(5), getSemesters().get(1)));
         return list;
     }
 
@@ -107,7 +108,8 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     @Override
     public List<Semester> getSemesters() {
         List<Semester> list = new ArrayList<>();
-        list.add(new Semester(1, "Semester 1", new Date(1452211200L), new Date(1464825600L), getSubjects()));
+        list.add(new Semester(1, "Semester 1", new Date(1452211200L), new Date(1464825600L),
+                              getSubjects()));
         return list;
     }
 
@@ -129,5 +131,20 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     @Override
     public Subject getSubject(int id) {
         return getSubjects().get(0);
+    }
+
+    @Override
+    public double getAverage(Semester semester) {
+        return 4.5d;
+    }
+
+    @Override
+    public double getAverage(Semester semester, Subject subject) {
+        return 4.25d;
+    }
+
+    @Override
+    public double getAverage(Subject subject) {
+        return 5.3d;
     }
 }
