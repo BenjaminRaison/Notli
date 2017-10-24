@@ -1,4 +1,4 @@
-package ch.notli.notli.Activitys;
+package ch.notli.notli.view;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(settingsIntent);
             return true;
         }

@@ -1,4 +1,4 @@
-package ch.notli.notli.Activitys;
+package ch.notli.notli.view;
 
 import android.app.DialogFragment;
 import android.os.Bundle;

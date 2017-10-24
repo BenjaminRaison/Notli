@@ -1,4 +1,4 @@
-package ch.notli.notli;
+package ch.notli.notli.view;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
