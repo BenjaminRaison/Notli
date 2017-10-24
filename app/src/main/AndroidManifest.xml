@@ -16,6 +16,7 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,6 +31,9 @@
         <activity
             android:name=".Activitys.AddEditGradeActivity"
             android:label="@string/title_activity_addGrade" />
-
+        <activity
+            android:name=".Activitys.SubjectActivity"
+            android:label="@string/subject"></activity>
     </application>
+
 </manifest>
