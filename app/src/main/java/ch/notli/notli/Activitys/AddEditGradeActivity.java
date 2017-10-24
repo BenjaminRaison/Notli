@@ -7,8 +7,7 @@ import android.view.View;
 
 import ch.notli.notli.R;
 
-public class AddEditGradeActivity extends AppCompatActivity{
-
+public class AddEditGradeActivity extends AppCompatActivity {
 
 
     @Override
