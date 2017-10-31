@@ -19,6 +19,13 @@ public class Semester {
         this.subjects = subjects;
     }
 
+    public Semester(String name, Date start, Date end, List<Subject> subjects) {
+        this.name = name;
+        this.start = start;
+        this.end = end;
+        this.subjects = subjects;
+    }
+
     public List<Subject> getSubjects() {
         return subjects;
     }

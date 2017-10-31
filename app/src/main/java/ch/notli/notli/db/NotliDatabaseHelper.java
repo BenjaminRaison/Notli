@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,7 +42,6 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
 
     public NotliDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        Log.d(TAG, "NotliDatabaseHelper: constructor");
     }
 
     @Override
@@ -62,7 +60,6 @@ public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatab
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.d(TAG, "onCreate: DB created");
         db.execSQL(SQL_CREATE_DATABASE);
     }
 
