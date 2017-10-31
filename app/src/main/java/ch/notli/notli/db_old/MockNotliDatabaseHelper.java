@@ -1,12 +1,12 @@
-package ch.notli.notli.db;
+package ch.notli.notli.db_old;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import ch.notli.notli.db.model.Grade;
-import ch.notli.notli.db.model.Semester;
-import ch.notli.notli.db.model.Subject;
+import ch.notli.notli.db_old.model.Grade;
+import ch.notli.notli.db_old.model.Semester;
+import ch.notli.notli.db_old.model.Subject;
 
 /**
  * HOW TO USE: INotliDatabase db = new MockNotliDatabaseHelper();
@@ -102,7 +102,8 @@ public class MockNotliDatabaseHelper implements INotliDatabase {
     @Override
     public List<Semester> getSemesters() {
         List<Semester> list = new ArrayList<>();
-        list.add(new Semester(1, "Semester 1", new Date(1452211200L), new Date(1464825600L), getSubjects()));
+        list.add(new Semester(1, "Semester 1", new Date(1452211200L), new Date(1464825600L),
+                              getSubjects()));
         return list;
     }
 

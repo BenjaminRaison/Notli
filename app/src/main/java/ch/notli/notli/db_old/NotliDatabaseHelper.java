@@ -1,4 +1,4 @@
-package ch.notli.notli.db;
+package ch.notli.notli.db_old;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.List;
 
-import ch.notli.notli.db.model.Grade;
-import ch.notli.notli.db.model.Semester;
-import ch.notli.notli.db.model.Subject;
+import ch.notli.notli.db_old.model.Grade;
+import ch.notli.notli.db_old.model.Semester;
+import ch.notli.notli.db_old.model.Subject;
 
 public class NotliDatabaseHelper extends SQLiteOpenHelper implements INotliDatabase {
 

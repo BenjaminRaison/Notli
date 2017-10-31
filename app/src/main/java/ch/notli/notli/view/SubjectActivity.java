@@ -1,7 +1,7 @@
 package ch.notli.notli.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import ch.notli.notli.R;
 

@@ -1,11 +1,11 @@
-package ch.notli.notli.db;
+package ch.notli.notli.db_old;
 
 
 import java.util.List;
 
-import ch.notli.notli.db.model.Grade;
-import ch.notli.notli.db.model.Semester;
-import ch.notli.notli.db.model.Subject;
+import ch.notli.notli.db_old.model.Grade;
+import ch.notli.notli.db_old.model.Semester;
+import ch.notli.notli.db_old.model.Subject;
 
 public interface INotliDatabase {
 

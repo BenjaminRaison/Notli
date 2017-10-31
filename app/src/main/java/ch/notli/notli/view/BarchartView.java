@@ -11,11 +11,11 @@ import com.github.mikephil.charting.data.BarEntry;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.notli.notli.db.INotliDatabase;
-import ch.notli.notli.db.MockNotliDatabaseHelper;
-import ch.notli.notli.db.model.Grade;
-import ch.notli.notli.db.model.Semester;
-import ch.notli.notli.db.model.Subject;
+import ch.notli.notli.db_old.INotliDatabase;
+import ch.notli.notli.db_old.MockNotliDatabaseHelper;
+import ch.notli.notli.db_old.model.Grade;
+import ch.notli.notli.db_old.model.Semester;
+import ch.notli.notli.db_old.model.Subject;
 
 public class BarchartView extends View {
     private INotliDatabase db;
@@ -46,7 +46,7 @@ public class BarchartView extends View {
     private ArrayList<String> getXLabels() {
         ArrayList<String> labels = new ArrayList<>();
         List<Subject> subjectList = db.getSubjects(semester);
-        for(Subject subject : subjectList) {
+        for (Subject subject : subjectList) {
             labels.add(subject.getName());
         }
         return labels;
@@ -55,7 +55,7 @@ public class BarchartView extends View {
     private ArrayList<BarEntry> getEntries() {
         ArrayList<BarEntry> entries = new ArrayList<>();
         List<Grade> gradeList = db.getGrades(semester);     //TODO: Durchschnitt
-        for(int index = 0; index <= gradeList.size(); index++) {
+        for (int index = 0; index <= gradeList.size(); index++) {
             entries.add(new BarEntry((float) gradeList.get(index).getGrade(), index));
         }
         return entries;
