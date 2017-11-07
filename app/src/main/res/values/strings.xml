@@ -3,6 +3,8 @@
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="action_settings">Einstellungen</string>
 
+    <!--Basics-->
+    <string name="subject">Fach</string>
 
     <!--AddGrade-->
     <string name="title_activity_addGrade">Note Hinzufügen</string>
@@ -10,4 +12,5 @@
     <string name="text_activity_addGrade_date">Datum</string>
     <string name="button_activity_addEditGrade_save">Speichern</string>
     <string name="button_activity_addEditGrade_delete">Löschen</string>
+
 </resources>
