@@ -9,7 +9,7 @@
 
     <Spinner
         android:id="@+id/semesterSpinner"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -23,17 +23,17 @@
 
     <Spinner
         android:id="@+id/subjectSpinner"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="22dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/semesterSpinner"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/semesterSpinner" />
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <Spinner
         android:id="@+id/weightSpinner"
@@ -61,94 +61,69 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/button_activity_addEditGrade_save"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/dateEditText" />
 
     <Button
         android:id="@+id/deleteButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/button_activity_addEditGrade_delete"
-        app:layout_constraintBottom_toTopOf="@+id/saveButton"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         android:layout_marginStart="8dp"
         android:backgroundTint="@color/deleteButtonColor"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/dateTextView"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/text_activity_addGrade_date"
+        android:text="@string/button_activity_addEditGrade_delete"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/themaTextView"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightSpinner" />
 
-    <TextView
-        android:id="@+id/themaTextView"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/text_activity_addEditGrade_thema"
-        app:layout_constraintTop_toBottomOf="@+id/subjectSpinner"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginTop="24dp"
+        android:text="@string/button_activity_addEditGrade_save"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteButton" />
 
     <EditText
-        android:id="@+id/editText6"
-        android:layout_width="286dp"
+        android:id="@+id/topicEditText"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="@string/text_activity_addEditGrade_topic"
         android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectSpinner" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="88dp"
-        android:layout_height="50dp"
-        android:onClick="showDatePickerDialog"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="198dp"
+        android:id="@+id/dateEditText"
+        android:focusable="false"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="date"
-        app:layout_constraintRight_toLeftOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="204dp" />
+        android:hint="@string/text_activity_addGrade_date"
+        android:editable="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicEditText"
+        app:layout_constraintHorizontal_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
